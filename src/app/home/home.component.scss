@@ -1,0 +1,116 @@
+/* ── Toolbar ── */
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.4rem 1rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--accent-text);
+  transition: opacity 0.2s;
+  &:hover { opacity: 0.85; }
+}
+
+.toolbar button {
+  width: 2rem;
+  height: 2rem;
+  border: 1.5px solid var(--theme-btn);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--theme-btn);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  &:hover { opacity: 1; }
+}
+
+/* ── Hero (full viewport minus toolbar) ── */
+.hero {
+  height: calc(100vh - 53px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 2rem 2.5rem;
+  border-radius: 1.5rem;
+  background: var(--card-bg);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  cursor: default;
+  user-select: none;
+}
+
+.avatar {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background-size: 105% auto;
+  background-position: 70% center;
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  margin-bottom: -0.25rem;
+}
+
+.tagline {
+  font-size: 1rem;
+  opacity: 0.6;
+  margin-bottom: 0.25rem;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 0.25rem;
+  padding: 0.6rem 1.75rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  background: var(--accent);
+  color: var(--accent-text);
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+}
+
+/* Dark mode gradient h1 */
+[data-theme="dark"] h1 {
+  background: linear-gradient(90deg, #6c63ff, #48cfad);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
