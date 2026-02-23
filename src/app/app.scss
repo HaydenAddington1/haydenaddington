@@ -1,0 +1,130 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.page {
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: background 0.4s, color 0.4s;
+}
+
+/* ── Theme Tabs ── */
+.theme-tabs {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  align-self: flex-end;
+  margin-right: 1.5rem;
+
+  button {
+    width: 2.25rem;
+    height: 2.25rem;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+
+    &:hover { opacity: 1; }
+  }
+}
+
+/* ── Card ── */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 2.5rem 3rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+/* ── Hero ── */
+.hero {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.avatar {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background-size: 105% auto;
+  background-position: 70% center;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.65rem 2rem;
+  border-radius: 2rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: transform 0.15s, box-shadow 0.15s;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  }
+}
+
+/* ════════════════════════════════
+   MINIMAL theme (default)
+════════════════════════════════ */
+.page[data-theme="minimal"] {
+  background: #f0f0f0;
+  color: #111111;
+
+  .theme-tabs button { color: #111111; }
+  .card { background: #ffffff; }
+
+  .resume-btn {
+    background: #111111;
+    color: #ffffff;
+  }
+}
+
+/* ════════════════════════════════
+   DARK theme
+════════════════════════════════ */
+.page[data-theme="dark"] {
+  background: #2b2b2b;
+  color: #e0e0e0;
+
+  .theme-tabs button { color: #e0e0e0; }
+  .card { background: #3c3f41; }
+
+  h1 {
+    background: linear-gradient(90deg, #6c63ff, #48cfad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .resume-btn {
+    background: linear-gradient(90deg, #6c63ff, #48cfad);
+    color: #ffffff;
+  }
+}
+
