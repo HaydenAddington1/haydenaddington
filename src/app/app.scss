@@ -43,6 +43,8 @@
   padding: 2.5rem 3rem;
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  cursor: default;
+  user-select: none;
 }
 
 /* ── Hero ── */
@@ -52,6 +54,7 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
+  padding-bottom: 30vh;
 }
 
 .avatar {
