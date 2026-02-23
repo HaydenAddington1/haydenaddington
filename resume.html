@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Hayden Addington – Resume</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 11px;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 36px 48px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 2px solid #1a1a1a;
+      padding-bottom: 8px;
+      margin-bottom: 14px;
+    }
+    header h1 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; }
+    header .contact {
+      text-align: right;
+      font-size: 10px;
+      color: #444;
+      line-height: 1.7;
+    }
+    header .contact a { color: #444; text-decoration: none; }
+
+    /* ── Two-column body ── */
+    .columns {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 24px;
+    }
+
+    /* ── Section ── */
+    section { margin-bottom: 16px; }
+    h2 {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #555;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 3px;
+      margin-bottom: 8px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      line-height: 1.65;
+      color: #333;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 10px; }
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+    .job-title { font-weight: 700; font-size: 11.5px; }
+    .job-meta { font-size: 10px; color: #666; text-align: right; }
+    .job-company { font-size: 10.5px; color: #444; margin-bottom: 4px; }
+    ul { padding-left: 14px; margin-top: 4px; }
+    li { margin-bottom: 3px; line-height: 1.5; color: #222; }
+
+    /* ── Education ── */
+    .edu-degree { font-weight: 700; font-size: 11px; }
+    .edu-school { font-size: 10.5px; color: #444; margin-top: 2px; }
+    .edu-date { font-size: 10px; color: #666; margin-top: 1px; }
+
+    /* ── Skills ── */
+    .skills { display: flex; flex-direction: column; gap: 4px; }
+    .skill {
+      background: #f0f0f0;
+      border-radius: 3px;
+      padding: 2px 8px;
+      font-size: 10px;
+    }
+
+    @media print {
+      body { padding: 24px 36px; }
+      @page { size: letter; margin: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>
+      <h1>Hayden Addington</h1>
+    </div>
+    <div class="contact">
+      <div>Seattle, WA</div>
+      <div><a href="mailto:haydenaddington@gmail.com">haydenaddington@gmail.com</a></div>
+      <div><a href="https://linkedin.com/in/hayden-addington-ab137389">linkedin.com/in/hayden-addington-ab137389</a></div>
+      <div><a href="https://haydenaddington1.github.io/haydenaddington">haydenaddington1.github.io/haydenaddington</a></div>
+    </div>
+  </header>
+
+  <div class="columns">
+
+    <!-- Left column -->
+    <div>
+      <section class="summary">
+        <h2>Summary</h2>
+        <p>Software engineer with 10+ years at Expeditors building systems that solve real problems at scale. Repeatedly first to introduce new patterns to the organization — including the company's first HTTPS/OAuth 2.0 EDI gateway and its first Microsoft Entra integration. End-to-end owner: from architecture to delivery to adoption. Known for shipping tools that hundreds of people depend on daily.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu-degree">B.S., Computer Science</div>
+        <div class="edu-school">Western Washington University</div>
+        <div class="edu-school">Minor: Business Administration</div>
+        <div class="edu-date">2010 – 2015</div>
+      </section>
+
+      <section>
+        <h2>Skills</h2>
+        <div class="skills">
+          <span class="skill">Java</span>
+          <span class="skill">Spring Boot</span>
+          <span class="skill">Angular</span>
+          <span class="skill">TypeScript</span>
+          <span class="skill">DB2</span>
+          <span class="skill">PostgreSQL</span>
+          <span class="skill">webMethods</span>
+          <span class="skill">Kafka</span>
+          <span class="skill">SonicMQ</span>
+          <span class="skill">OAuth 2.0</span>
+          <span class="skill">Microsoft Entra</span>
+          <span class="skill">CI/CD</span>
+        </div>
+      </section>
+    </div>
+
+    <!-- Right column -->
+    <div>
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Senior Developer</span>
+            <span class="job-meta">Jun 2022 – Present</span>
+          </div>
+          <div class="job-company">Expeditors International · Seattle, WA</div>
+          <ul>
+            <li>Architected and delivered the <strong>Message Manager Suite</strong> — a collection of highly scalable applications ingesting EDI data from Files, Kafka Events, and SonicMQ, persisting and queuing messages for downstream processing via custom per-customer configurations.</li>
+            <li>Built and shipped a central configuration UI used by hundreds of internal users to manage message routing rules, eliminating developer bottlenecks for configuration changes.</li>
+            <li>The suite reduced webMethods CPU utilization by <strong>15%</strong> and measurably increased overall EDI throughput across the platform.</li>
+            <li>Architected and delivered <strong>Reference Editor</strong> — a web application providing a global interface for viewing and managing EDI reference data, used by hundreds of employees across the organization.</li>
+            <li>Enabled developers to rapidly query and update reference data through a purpose-built UI, eliminating manual processes and reducing turnaround time on data changes.</li>
+            <li>Automated the full CI/CD pipeline for reference data deployments, removing manual release overhead and increasing delivery consistency.</li>
+            <li>Pioneered the migration of Reference Editor from an internal identity and access management solution to <strong>Microsoft Entra</strong>, making it the first application at Expeditors to adopt Entra as its identity and access provider.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Developer III</span>
+            <span class="job-meta">Nov 2020 – Jun 2022</span>
+          </div>
+          <div class="job-company">Expeditors International · Seattle, WA</div>
+          <ul>
+            <li>Designed and delivered the <strong>CIS Gateway</strong> — Expeditors' first application to accept inbound EDI data over HTTPS with OAuth 2.0 authentication, modernizing a critical integration channel previously unavailable to external partners.</li>
+            <li>The gateway is now relied upon by dozens of clients for critical, time-sensitive EDI communications.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Software Developer II – EDI</span>
+            <span class="job-meta">Dec 2015 – Nov 2020</span>
+          </div>
+          <div class="job-company">Expeditors International · Seattle, WA</div>
+          <ul>
+            <li>Designed, implemented, and maintained EDI translations for 30+ customers using a proprietary language and webMethods.</li>
+            <li>Built internal tooling to measurably improve developer efficiency across EDI workflows.</li>
+            <li>Created a Swing-based application to automate testing in legacy systems.</li>
+            <li>Authored a reusable framework adopted by all EDI developers for accounting translations.</li>
+            <li>Supported production systems on-call and mentored interns and associate developers.</li>
+          </ul>
+        </div>
+
+      </section>
+    </div>
+
+  </div>
+
+</body>
+</html>
+
